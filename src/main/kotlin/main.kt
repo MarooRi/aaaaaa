@@ -74,11 +74,6 @@ fun inStudents(kindOfWorks: List<KindOfWorks>): List<Student> {
         }
     }.flatMap { it }
 
-    /*val groups3 = students.map{
-        if(it.nameGroup == namesGroup[0])
-            Group(it.nameGroup, results[0])
-    }*/
-
 
     //filter
     val groups = namesGroup.map{ name ->
@@ -91,21 +86,8 @@ fun inStudents(kindOfWorks: List<KindOfWorks>): List<Student> {
         }.flatMap { it }) // если есть студент в группе той, то его добавляем в оценки
     }
 
-        /*listOf(
-
-        results.filterIndexed { index, res -> res.nameStudent == group[index].name }
-        Group("20z",  results.flatMap { it }.filter { }), Group("20m" ) )*/
-
     groupsMongo.insertMany(groups)
     return students
-}
-
-
-fun setKind(student: Student, kindOfWorks: List<KindOfWorks>): List<Result> {
-    val res = kindOfWorks.map{
-        Result(it.nameOfWork, student.id, student.name)
-    }
-    return res
 }
 
 // Коллекци в Mongo
@@ -117,15 +99,6 @@ fun main() {
     val kindWorks = inWorks()
     val students = inStudents(kindWorks)
 
-    val grades = listOf(listOf(5, 10, 15), listOf(3, 4, 10), listOf(5, 1, 15))
-
-    /*val x = students.mapIndexed { ind, student ->
-        {
-            kindWorks.mapIndexed { index, kindOfWorks ->
-                groupsMongo.updateMany(and(Group::grades / Result::nameStudent eq student.name), setValue(Group::grades.posOp / Result::nameOfWork, kindOfWorks.nameOfWork))
-            }
-        }
-    }*/
     /*printInHtml()
     println("Добрый день! Вы попали в программу выставления рейтинга. " +
             "Вы хотите использовать уже имеющиюся формулу или ввести свою? Если свою, то нажмите 0, если уже имеюся, то 1")*/
