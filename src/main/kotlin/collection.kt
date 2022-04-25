@@ -5,9 +5,10 @@ import org.litote.kmongo.newId
 import java.util.*
 
 @Serializable
-data class Student(val name:String,
-                   val nameGroup: String,
-                   val id: @Contextual Id<Student> = newId()
+data class Student(
+    val name: String,
+    val nameGroup: String,
+    val id: @Contextual Id<Student> = newId()
 )
 
 @Serializable
@@ -27,10 +28,6 @@ data class Result(val nameOfWork:String,
                   val nameStudent: String,
                   val count: Int = 0
 )
-/*@Serializable
-data class Rule(val type: String,
-                val number: Int = 0
-)*/
 
 @Serializable
 data class Formula(val nameFormula: String,
