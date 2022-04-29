@@ -19,7 +19,6 @@ data class Group(val nameGroup: String,
 @Serializable
 data class KindOfWorks(val nameOfWork: String,
                        val maxCount: Int = 0
-
 )
 
 @Serializable
