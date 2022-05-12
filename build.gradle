@@ -17,7 +17,6 @@ dependencies {
     implementation('org.litote.kmongo:kmongo-serialization:4.5.1')
     implementation('org.json:json:20220320')
     implementation('org.litote.kmongo:kmongo-id-serialization:4.5.1')
-    implementation ('org.apache.commons:commons-csv:1.9.0')
     implementation("org.slf4j:slf4j-api:1.7.25")
     implementation("org.slf4j:slf4j-log4j12:1.7.25")
     def kotlinx_html_version = "0.7.5"

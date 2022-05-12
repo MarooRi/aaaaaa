@@ -2,7 +2,6 @@ import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 import org.litote.kmongo.Id
 import org.litote.kmongo.newId
-import java.util.*
 
 @Serializable
 data class Student(
